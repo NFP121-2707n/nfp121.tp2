@@ -20,7 +20,7 @@ public class FahrenheitCelsius {
             
         int fahrenheit = Integer.valueOf(args[i]);
         float celsius = fahrenheitEnCelsius(Integer.valueOf(args[i]));
-        System.out.println(fahrenheit + "\u00B0F -> " + celsius + "\u00B0C"+i); // ligne,
+        System.out.println(fahrenheit + "\u00B0F -> " + celsius + "\u00B0C"); // ligne,
         }                                                                      // format
                                                                                 // imposés
                                                                                 
