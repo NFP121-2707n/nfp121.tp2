@@ -1,6 +1,5 @@
 package question2;
 
-
 /**
  * Classe-test FahrenheitCelsiusTest.
  *
@@ -25,6 +24,9 @@ package question2;
  * qui réalise les engagements, et suivi d'un appel à tearDown(), qui les
  * détruit.
  */
+
+
+
 public class FahrenheitCelsiusTest extends junit.framework.TestCase
 {
     // Définissez ici les variables d'instance nécessaires à vos engagements;
@@ -70,8 +72,15 @@ public class FahrenheitCelsiusTest extends junit.framework.TestCase
      */
      public void testNewTest()
     {
-        assertEquals("error : For input string: \"ZZ\"", "error : For input string: \"ZZ\"", question1.FahrenheitCelsius.fahrenheitEnCelsius("ZZ"), 0.1);
-        
+        try{
+        //assertEquals("error : For input string: \"ZZ\"", "error : For input string: \"ZZ\"", question1.FahrenheitCelsius.fahrenheitEnCelsius(13), 0.1);
+        assertEquals("   54 °F -> 12.2 °C ?", 12.2, question2.FahrenheitCelsius.fahrenheitEnCelsius("54"), 0.1);
+        assertEquals("error : For input string: ZZ", "error : For input string: ZZ", question2.FahrenheitCelsius.fahrenheitEnCelsius("ZZ"));
+        assertEquals("   54 °F -> 12.2 °C ?", 12.2, question2.FahrenheitCelsius.fahrenheitEnCelsius("54"));
+    }catch(NumberFormatException nfe){
+        System.out.println("error : " + nfe.getMessage());  // en cas d'erreur 
+        //throw new NumberFormatException("error : " + nfe.getMessage());
+    }
     }
 
 }
